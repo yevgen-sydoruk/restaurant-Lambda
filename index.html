@@ -155,27 +155,23 @@
                         <li class="menu-category-list-item">
                             <div class="dish">
                                 <!--  -->
-                                <h3 class="dish-name">Tzatsiki
+                                <h3>Tzatsiki
                                 </h3>
-                                <p class="dish-price">$3.99</p>
+                                <p>$3.99</p>
                             </div>
                             <p class="dish-description">Refreshing traditional cucumber and garlic yoghurt dip.</p>
                         </li>
                         <li class="menu-category-list-item">
                             <div class="dish">
-                                <h3 class="dish-name">Aubergine Salad
-
-                                </h3>
-                                <p class="dish-price">$5.50</p>
+                                <h3>Aubergine Salad</h3>
+                                <p>$5.50</p>
                             </div>
                             <p class="dish-description">Pureed eggplant, garlic, green pepper and tomato dip.</p>
                         </li>
                         <li class="menu-category-list-item">
                             <div class="dish">
-                                <h3 class="dish-name">Aubergine Salad
-
-                                </h3>
-                                <p class="dish-price">$5.25</p>
+                                <h3>Aubergine Salad</h3>
+                                <p>$5.25</p>
                             </div>
                             <p class="dish-description">Pureed eggplant, garlic, green pepper and tomato dip.</p>
                         </li>
@@ -187,18 +183,15 @@
                     <ul class="menu-category-list">
                         <li class="menu-category-list-item">
                             <div class="dish">
-                                <h3 class="dish-name">Haloumi
-                                </h3>
-                                <p class="dish-price">$3.99</p>
+                                <h3>Haloumi</h3>
+                                <p>$3.99</p>
                             </div>
                             <p class="dish-description">Refreshing traditional cucumber and garlic yoghurt dip.</p>
                         </li>
                         <li class="menu-category-list-item">
                             <div class="dish">
-                                <h3 class="dish-name">Spinach Pie
-
-                                </h3>
-                                <p class="dish-price">$5.50</p>
+                                <h3>Spinach Pie</h3>
+                                <p>$5.50</p>
                             </div>
                             <p class="dish-description">Pureed eggplant, garlic, green pepper and tomato dip.</p>
                         </li>
@@ -210,27 +203,23 @@
                     <ul class="menu-category-list">
                         <li class="menu-category-list-item">
                             <div class="dish">
-                                <h3 class="dish-name">Olive Specials
+                                <h3>Olive Specials
                                 </h3>
-                                <p class="dish-price">$5.99</p>
+                                <p>$5.99</p>
                             </div>
                             <p class="dish-description">Refreshing traditional cucumber and garlic yoghurt dip.</p>
                         </li>
                         <li class="menu-category-list-item special">
                             <div class="dish">
-                                <h3 class="dish-name">Greek Salad
-
-                                </h3>
-                                <p class="dish-price">$5.50</p>
+                                <h3>Greek Salad</h3>
+                                <p>$5.50</p>
                             </div>
                             <p class="dish-description">Pureed eggplant, garlic, green pepper and tomato dip.</p>
                         </li>
                         <li class="menu-category-list-item">
                             <div class="dish">
-                                <h3 class="dish-name">Gusto Salad
-
-                                </h3>
-                                <p class="dish-price">$5.25</p>
+                                <h3>Gusto Salad</h3>
+                                <p>$5.25</p>
                             </div>
                             <p class="dish-description">Pureed eggplant, garlic, green pepper and tomato dip.</p>
                         </li>
@@ -296,7 +285,7 @@
 
         <section class="reservations">
             <h2 class="visually-hidden">Reservations</h2>
-            <div class="wrapper">
+            <div class="wrapper reservations-block">
                 <div class="reservations-images">
                     <img src="img/reservation-1.png" alt="Delishes meal" class="reservations-images-img">
                     <img src="img/reservation-2.png" alt="Delishes meal" class="reservations-images-img">
@@ -313,26 +302,29 @@
                         us out! Perfect materials and freshly baked food.
                     </p>
 
-                    <form class="reservation-form">
-                        <p>
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="username" placeholder="your name *">
+                    <form class="reservations-form">
+                        <p class="reservations-form-field">
+                            <label class="reservations-form-field-label" for="name">Name</label>
+                            <input class="reservations-form-field-input" type="text" id="name" name="username"
+                                placeholder="your name *">
                         </p>
-                        <p>
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="usermail" placeholder="your email *">
+                        <p class="reservations-form-field">
+                            <label class="reservations-form-field-label" for="email">Email</label>
+                            <input class="reservations-form-field-input" type="email" id="email" name="usermail"
+                                placeholder="your email *">
                         </p>
-                        <p>
-                            <label for="date">Date</label>
-                            <label for="date"><i class="fas fa-search"></i></label>
-                            <input placeholder="date *" type="text" onfocus="(this.type='date')"
-                                onblur="(this.type='text')" id="date" name="specifydate">
+                        <p class="reservations-form-field">
+                            <label class="reservations-form-field-label" for="date">Date</label>
+                            <label class="reservations-form-field-icon" for="date"><i
+                                    class="fas fa-calendar-alt"></i></label>
+                            <input class="reservations-form-field-input" placeholder="date *" type="text"
+                                onfocus="(this.type='date')" onblur="(this.type='text')" id="date" name="specifydate">
                         </p>
-                        <p>
-                            <label for="party-number">
+                        <p class="reservations-form-field">
+                            <label class="reservations-form-field-label" for="party-number">
                                 Party number
                             </label>
-                            <select id="party-number" name="party-number">
+                            <select class="reservations-form-field-input" id="party-number" name="party-number">
                                 <option value="none" hidden>party number</option>
                                 <option value="1">some</option>
                                 <option value="2">random</option>
@@ -340,7 +332,10 @@
                                 <option value="4!">BAZINGA!</option>
                             </select>
                         </p>
-                        <button type="submit">Book now!</button>
+                        <p class="reservations-form-field-block">
+                            <button class="reservations-form-field-btn" type="submit">Book now!</button>
+                        </p>
+
                     </form>
                 </article>
             </div>
@@ -348,52 +343,60 @@
     </main>
 
     <footer class="footer">
-        <div class="wrapper">
+        <div class="wrapper footer-block">
             <div class="footer-about">
-                <h2 class="footer-about-title">
+                <h2 class="footer-title">
                     About Us
                 </h2>
-                <p class="footer-about-text">Lambda's new and expanded Chelsea location represents a truly authentic
-                    <span class="footer-about-text-special">Greek</span> patisserie, featuring breakfasts of fresh
+                <p class="footer-text">Lambda's new and expanded Chelsea location represents a truly authentic
+                    <span class="footer-text-special">Greek</span> patisserie, featuring breakfasts of fresh
                     croissants
                     and steaming bowls of café.
                     Lamda the best restaurant in town</p>
             </div>
             <div class="footer-open">
-                <h2 class="footer-open-title">
-                    Open Hours
+                <h2 class="footer-title">
+                    Opening Hours
                 </h2>
-                <p class="footer-open-text">Mon-Thu: 7:00am-8:00pm </p>
-                <p class="footer-open-text">Fri-Sun: 7:00am-10:00pm</p>
-                <ul class="footer-open-list">
-                    <li class="footer-open-list-item"><a class="item-link" href="#"><i class="fas fa-search"></i></a>
+                <p class="footer-text"><span class="footer-text-special">Mon-Thu:</span> 7:00am-8:00pm </p>
+                <p class="footer-text"><span class="footer-text-special">Fri-Sun:</span> 7:00am-10:00pm</p>
+                <ul class="footer-list">
+                    <li class="footer-list-item"><a class="link" href="#"><i class="fab fa-cc-amex"></i></a>
                     </li>
-                    <li class="footer-open-list-item"><a class="item-link" href="#"><i class="fas fa-search"></i></a>
+                    <li class="footer-list-item"><a class="link" href="#"><i class="fab fa-cc-paypal"></i></a>
                     </li>
-                    <li class="footer-open-list-item"><a class="item-link" href="#"><i class="fas fa-search"></i></a>
+                    <li class="footer-list-item"><a class="link" href="#"><i class="fab fa-cc-visa"></i></a>
                     </li>
-                    <li class="footer-open-list-item"><a class="item-link" href="#"><i class="fas fa-search"></i></a>
+                    <li class="footer-list-item"><a class="link" href="#"><i class="fab fa-cc-discover"></i></a>
                     </li>
                 </ul>
             </div>
             <div class="footer-location">
-                <h2 class="footer-location-title">
+                <h2 class="footer-title">
                     Our Location
                 </h2>
-                <p class="footer-location-text">19th Paradise Street Sitia</p>
-                <p class="footer-location-text">128 Meserole Avenue</p>
-                <ul class="footer-location-list">
-                    <li class="footer-location-list-item"><a class="social-link" href="#"><i
-                                class="fas fa-search"></i></a>
+                <p class="footer-text"><span class="footer-text-special">19th Paradise Street Sitia</span></p>
+                <p class="footer-text"><span class="footer-text-special">128 Meserole Avenue</span></p>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a class="link" href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
                     </li>
-                    <li class="footer-location-list-item"><a class="social-link" href="#"><i
-                                class="fas fa-search"></i></a>
+                    <li class="footer-list-item">
+                        <a class="link" href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </li>
-                    <li class="footer-location-list-item"><a class="social-link" href="#"><i
-                                class="fas fa-search"></i></a>
+                    <li class="footer-list-item">
+                        <a class="link" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
                     </li>
-                    <li class="footer-location-list-item"><a class="social-link" href="#"><i
-                                class="fas fa-search"></i></a>
+                    <li class="footer-list-item">
+                        <a class="link" href="#">
+                            <i class="fas fa-newspaper"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
