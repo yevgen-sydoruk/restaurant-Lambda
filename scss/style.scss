@@ -207,6 +207,7 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
                 font-family: $Gentium;
                 font-size: (21px / 16px) * 1rem;
                 padding-top: 2.625rem;
+                z-index: 1;
                 &:hover {
                     border-top: 3px solid #fff;
                 }
@@ -364,7 +365,7 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
     }
 }
 
-/* About */
+/* Ingredients */
 
 .ingredients {
     background-image: url(../img/ingredients-bg.png);
@@ -384,16 +385,25 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
         float: right;
     }
     &-title {
+        position: relative;
+        width: 100%;
         padding-top: 80px / 16px * 1rem;
+        padding-bottom: 70px / 16px * 1rem;
         font-family: $Yeseva;
         font-size: 36px / 16px * 1rem;
         color: #fff;
         text-align: center;
         &::after {
-            padding-top: 15px / 16px * 1rem;
-            padding-bottom: 30px / 16px * 1rem;
+            position: absolute;
+            top: 135px;
+            left: 0;
+            // Alternative
+            // padding-top: 15px / 16px * 1rem;
+            // padding-bottom: 30px / 16px * 1rem;
+            // position - delete;
             content: ".";
             font-size: 0;
+            width: 100%;
             margin: 0 auto;
             display: block;
             height: 24px / 16px * 1rem;
@@ -422,6 +432,7 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
         border-radius: 50%;
         border: 5px solid rgba($color: #fff, $alpha: 0.09);
         overflow: hidden;
+        z-index: 1;
         &:last-of-type {
             margin-right: 0;
         }
@@ -430,15 +441,199 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
         position: absolute;
         top: -31px;
         left: -45px;
+        z-index: -1;
     }
     &-img2 {
         position: absolute;
         top: -89px;
         left: -42px;
+        z-index: -1;
     }
     &-img3 {
         position: absolute;
         top: -16px;
         left: -43px;
+        z-index: -1;
     }
+}
+
+/* Menu */
+
+.menu {
+    position: relative;
+    padding-top: 6.25rem;
+    padding-bottom: 1.875rem;
+    background-image: url(../img/pattern-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    &::after {
+        content: ".";
+        font-size: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        z-index: -1;
+    }
+    &-block {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-category {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 70px;
+        width: 50%;
+
+        &-title {
+            position: relative;
+            width: 100%;
+            margin-bottom: 70px;
+            font-family: "Yeseva One", Arial, Helvetica, sans-serif;
+            font-size: 2.25rem;
+            color: #cc9900;
+            text-align: center;
+            &::after {
+                position: absolute;
+                top: 50px;
+                left: 0;
+                content: ".";
+                font-size: 0;
+                margin: 0 auto;
+                display: block;
+                height: 24px / 16px * 1rem;
+                width: 100%;
+                background-image: url(../img/divider-orange.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+        &-list {
+            min-width: 430px;
+            &-item {
+                margin-bottom: 30px;
+                .dish {
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 30px;
+                    font-family: $Yeseva;
+                    font-size: 21px / 16px * 1rem;
+                    color: #c89f2d;
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        content: ".";
+                        font-size: 0;
+                        margin-top: 35px;
+                        width: 100%;
+                        height: 1px;
+                        background: linear-gradient(
+                            0.25turn,
+                            rgba($color: #e5d9b1, $alpha: 0.5),
+                            rgba($color: $form-label, $alpha: 0.5),
+                            rgba($color: #e5d9b1, $alpha: 0.5)
+                        );
+                        z-index: -1;
+                    }
+                    &-name {
+                    }
+                    &-price {
+                    }
+                    &-description {
+                        font-family: $Lato;
+                        color: $text;
+                    }
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Reviews */
+
+.reviews {
+    background-image: url(../img/reviews-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-block {
+        display: flex;
+        justify-content: center;
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 70px 100px;
+        margin: 6.25rem 0;
+        background-color: rgba($color: #000000, $alpha: 0.67);
+    }
+    &-title {
+        position: relative;
+        width: 100%;
+        padding-bottom: 70px / 16px * 1rem;
+        font-family: $Yeseva;
+        font-size: 36px / 16px * 1rem;
+        color: #fff;
+        text-align: center;
+        &::after {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            // Alternative
+            // padding-top: 15px / 16px * 1rem;
+            // padding-bottom: 30px / 16px * 1rem;
+            // position - delete;
+            content: ".";
+            font-size: 0;
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+            height: 24px / 16px * 1rem;
+            background-image: url(../img/divider-white.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &-text {
+        position: relative;
+        padding-bottom: 70px;
+        max-width: 630px;
+        font-family: $Gentium;
+        font-size: 25px / 16px * 1rem;
+        line-height: 45px;
+        color: #dde0df;
+        text-align: center;
+        &::before {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            transform: translateX(-75%);
+            content: "“";
+            font-size: 96px;
+            font-family: Georgia;
+            opacity: 0.47;
+            color: #f2f4f4;
+        }
+    }
+    &-author {
+        font-size: 18px / 16px * 1rem;
+        font-family: $Lato;
+        color: #fff;
+    }
+}
+
+/* Reservations */
+
+.reservations {
 }

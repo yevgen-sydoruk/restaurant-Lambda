@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 ===================
  CSS RESET 
@@ -205,6 +206,7 @@ Variables
   font-family: "Gentium Book Basic", Arial, Helvetica, sans-serif;
   font-size: 1.3125rem;
   padding-top: 2.625rem;
+  z-index: 1;
 }
 .header-nav-list-link:hover {
   border-top: 3px solid #fff;
@@ -353,7 +355,7 @@ Variables
   width: 50%;
 }
 
-/* About */
+/* Ingredients */
 .ingredients {
   background-image: url(../img/ingredients-bg.png);
   background-size: cover;
@@ -373,17 +375,22 @@ Variables
   float: right;
 }
 .ingredients-title {
+  position: relative;
+  width: 100%;
   padding-top: 5rem;
+  padding-bottom: 4.375rem;
   font-family: "Yeseva One", Arial, Helvetica, sans-serif;
   font-size: 2.25rem;
   color: #fff;
   text-align: center;
 }
 .ingredients-title::after {
-  padding-top: 0.9375rem;
-  padding-bottom: 1.875rem;
+  position: absolute;
+  top: 135px;
+  left: 0;
   content: ".";
   font-size: 0;
+  width: 100%;
   margin: 0 auto;
   display: block;
   height: 1.5rem;
@@ -411,6 +418,7 @@ Variables
   border-radius: 50%;
   border: 5px solid rgba(255, 255, 255, 0.09);
   overflow: hidden;
+  z-index: 1;
 }
 .ingredients-images:last-of-type {
   margin-right: 0;
@@ -419,14 +427,179 @@ Variables
   position: absolute;
   top: -31px;
   left: -45px;
+  z-index: -1;
 }
 .ingredients-img2 {
   position: absolute;
   top: -89px;
   left: -42px;
+  z-index: -1;
 }
 .ingredients-img3 {
   position: absolute;
   top: -16px;
   left: -43px;
+  z-index: -1;
 }
+
+/* Menu */
+.menu {
+  position: relative;
+  padding-top: 6.25rem;
+  padding-bottom: 1.875rem;
+  background-image: url(../img/pattern-2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.menu::after {
+  content: ".";
+  font-size: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.98);
+  z-index: -1;
+}
+.menu-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;
+  width: 50%;
+}
+.menu-category-title {
+  position: relative;
+  width: 100%;
+  margin-bottom: 70px;
+  font-family: "Yeseva One", Arial, Helvetica, sans-serif;
+  font-size: 2.25rem;
+  color: #cc9900;
+  text-align: center;
+}
+.menu-category-title::after {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  content: ".";
+  font-size: 0;
+  margin: 0 auto;
+  display: block;
+  height: 1.5rem;
+  width: 100%;
+  background-image: url(../img/divider-orange.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.menu-category-list {
+  min-width: 430px;
+}
+.menu-category-list-item {
+  margin-bottom: 30px;
+}
+.menu-category-list-item .dish {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  font-family: "Yeseva One", Arial, Helvetica, sans-serif;
+  font-size: 1.3125rem;
+  color: #c89f2d;
+}
+.menu-category-list-item .dish::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: ".";
+  font-size: 0;
+  margin-top: 35px;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(0.25turn, rgba(229, 217, 177, 0.5), rgba(201, 161, 49, 0.5), rgba(229, 217, 177, 0.5));
+  z-index: -1;
+}
+.menu-category-list-item .dish-description {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  color: #4c4c4c;
+}
+.menu-category-list-item:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Reviews */
+.reviews {
+  background-image: url(../img/reviews-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.reviews-block {
+  display: flex;
+  justify-content: center;
+}
+.reviews-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 70px 100px;
+  margin: 6.25rem 0;
+  background-color: rgba(0, 0, 0, 0.67);
+}
+.reviews-title {
+  position: relative;
+  width: 100%;
+  padding-bottom: 4.375rem;
+  font-family: "Yeseva One", Arial, Helvetica, sans-serif;
+  font-size: 2.25rem;
+  color: #fff;
+  text-align: center;
+}
+.reviews-title::after {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  content: ".";
+  font-size: 0;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  height: 1.5rem;
+  background-image: url(../img/divider-white.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.reviews-text {
+  position: relative;
+  padding-bottom: 70px;
+  max-width: 630px;
+  font-family: "Gentium Book Basic", Arial, Helvetica, sans-serif;
+  font-size: 1.5625rem;
+  line-height: 45px;
+  color: #dde0df;
+  text-align: center;
+}
+.reviews-text::before {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  transform: translateX(-75%);
+  content: "“";
+  font-size: 96px;
+  font-family: Georgia;
+  opacity: 0.47;
+  color: #f2f4f4;
+}
+.reviews-author {
+  font-size: 1.125rem;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+/* Reservations */
