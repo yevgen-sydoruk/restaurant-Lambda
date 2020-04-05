@@ -148,6 +148,13 @@ $Yeseva: "Yeseva One", Arial, Helvetica, sans-serif;
 $Lato: "Lato", Arial, Helvetica, sans-serif;
 $Sans: "Open Sans", Arial, Helvetica, sans-serif;
 
+/* Adaptive sizes */
+$screen-exsm-min: 550px;
+$screen-exsm-max: 550px;
+$screen-sm-max: 800px;
+$screen-md-max: 1100px;
+$screen-lg-max: 1400px;
+
 /*
 ===================
  Basic 
@@ -168,6 +175,24 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
     width: 1px !important;
     overflow: hidden;
 }
+
+@media only screen and (max-width: $screen-lg-max) {
+    .wrapper {
+        max-width: 1000px;
+    }
+}
+@media only screen and (max-width: $screen-md-max) {
+    .wrapper {
+        max-width: 700px;
+    }
+}
+@media only screen and (max-width: $screen-sm-max) {
+    .wrapper {
+        max-width: none;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+}
 /*
 ===================
  Header 
@@ -187,10 +212,13 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
 
     &-logo {
         transform: translateX(-25%);
+        &-img {
+            width: 100%;
+        }
     }
     &-nav {
         display: flex;
-        justify-content: flex-end;
+        // justify-content: flex-end;
         &-list {
             display: flex;
             align-items: center;
@@ -214,7 +242,6 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
     }
     &-socials {
         display: flex;
-        align-items: center;
         &-list {
             padding-left: 20px;
             display: flex;
@@ -228,6 +255,9 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
                     &:hover {
                         color: #ffbf00;
                     }
+                    &:active {
+                        color: $link;
+                    }
                 }
                 text-align: center;
                 .list-item-icon {
@@ -237,6 +267,9 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
                     &:hover {
                         fill: #ffbf00;
                     }
+                    &:active {
+                        fill: $link;
+                    }
                 }
                 &:first-of-type {
                     padding-left: 0;
@@ -244,7 +277,89 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
             }
         }
     }
+    &-menu-toggle {
+        display: none;
+        align-items: center;
+
+        &-burger {
+            font-size: 19px;
+            color: #fff;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
 }
+
+@media only screen and (max-width: $screen-lg-max) {
+    .header {
+        &-logo {
+            transform: none;
+            &-img {
+                width: 75%;
+            }
+        }
+        &-nav {
+            &-list {
+                &-item {
+                    padding-left: 35px;
+                }
+                &-link {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: $screen-md-max) {
+    .wrapper {
+        max-width: 750px;
+    }
+}
+@media only screen and (max-width: $screen-sm-max) {
+    .header {
+        &-socials {
+            &-list {
+                &-item {
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        &:hover {
+                            color: $link;
+                        }
+                        &:active {
+                            color: #fff;
+                        }
+                    }
+                    .list-item-icon {
+                        fill: #fff;
+                        &:hover {
+                            fill: $link;
+                        }
+                        &:active {
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        &-menu-toggle {
+            display: flex;
+            padding-left: 15px;
+            &-burger {
+                &:hover {
+                    color: $link;
+                }
+            }
+        }
+        &-nav {
+            &-list {
+                display: none;
+            }
+        }
+    }
+}
+
 /*
 ===================
  Main
@@ -300,6 +415,70 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
             &:hover {
                 border: 1px solid rgba($color: #000, $alpha: 0.7);
                 background-color: rgba($color: #000, $alpha: 0.7);
+            }
+            &:active {
+                border: 1px solid rgba($color: #fff, $alpha: 0.7);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $screen-lg-max) {
+    .banner {
+        min-height: 66.8vw;
+
+        &-title {
+            max-width: 870px;
+            font-size: 64px / 16px * 1rem;
+            line-height: 4.75rem;
+            &::after {
+                padding: 25px 0;
+            }
+        }
+        &-block {
+            &-btn {
+                padding: 1rem 3rem;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $screen-md-max) {
+    .banner {
+        min-height: 84.8vw;
+        background-position: center;
+        &-title {
+            max-width: 635px;
+            font-size: 3rem;
+            line-height: 3rem;
+            &::after {
+                background-size: 40%;
+            }
+        }
+        &-block {
+            &-btn {
+                padding: 0.75rem 2.75rem;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $screen-sm-max) {
+    .banner {
+        min-height: 100.8vw;
+        &-title {
+            max-width: 350px;
+            font-size: 2rem;
+            line-height: 2rem;
+            &::after {
+                background-size: 50%;
+                padding: 10px 0;
+            }
+        }
+        &-block {
+            &-btn {
+                padding: 0.5rem 1.75rem;
+                font-size: 1rem;
             }
         }
     }
@@ -364,6 +543,19 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
     }
     &-aside {
         width: 50%;
+        &-img {
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: $screen-sm-max) {
+    .about {
+        &-content {
+            width: 100%;
+        }
+        &-aside {
+            display: none;
+        }
     }
 }
 
@@ -384,7 +576,6 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
         margin: 6.25rem 0;
         background-color: rgba($color: #000000, $alpha: 0.67);
         width: 50%;
-        float: right;
     }
     &-title {
         position: relative;
@@ -460,6 +651,21 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
         z-index: -1;
     }
 }
+@media only screen and (max-width: $screen-md-max) {
+    .ingredients {
+        &-content {
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: $screen-md-max) {
+    .ingredients {
+        &-images {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
 
 /* Menu */
 
@@ -492,6 +698,8 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
         align-items: center;
         margin-bottom: 70px;
         width: 50%;
+        padding: 0 10px;
+        box-sizing: border-box;
 
         &-title {
             position: relative;
@@ -523,7 +731,7 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
             &-item {
                 margin-bottom: 20px;
                 padding: 10px;
-
+                box-sizing: border-box;
                 .dish {
                     position: relative;
                     display: flex;
@@ -578,6 +786,22 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
                     margin-bottom: 0;
                 }
             }
+        }
+    }
+}
+@media only screen and (max-width: $screen-md-max) {
+    .menu {
+        &-category {
+            &-list {
+                min-width: 340px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $screen-sm-max) {
+    .menu {
+        &-category {
+            width: 100%;
         }
     }
 }
@@ -659,6 +883,22 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
         color: #fff;
     }
 }
+@media only screen and (max-width: $screen-sm-max) {
+    .reviews {
+        &-text {
+            font-size: 1.3125rem;
+            line-height: 35px;
+        }
+    }
+}
+@media only screen and (max-width: $screen-exsm-max) {
+    .reviews {
+        &-text {
+            font-size: 1rem;
+            line-height: 25px;
+        }
+    }
+}
 
 /* Reservations */
 
@@ -687,6 +927,7 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
         width: 50%;
         &-img {
             margin-right: 15px;
+            width: 45%;
             &:last-of-type {
                 margin-right: 0;
                 margin-left: 15px;
@@ -729,6 +970,7 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
         max-width: 430px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         &-field {
             position: relative;
             display: flex;
@@ -753,6 +995,10 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
                 height: 35px;
                 box-sizing: border-box;
                 font-style: italic;
+                outline: none;
+                &:focus {
+                    border: 1px solid #c89f2d;
+                }
             }
             &-icon {
                 position: absolute;
@@ -776,6 +1022,38 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
                 cursor: pointer;
                 &:hover {
                     background-color: #ffbf00;
+                }
+                &:active {
+                    background-color: $form-label;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: $screen-md-max) {
+    .reservations {
+        &-images {
+            display: none;
+        }
+        &-content {
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: $screen-md-max) {
+    .reservations {
+        &-form {
+            flex-direction: column;
+            &-field {
+                width: 100%;
+                &-icon {
+                    left: 85%;
+                }
+                &-input {
+                    min-width: 270px;
+                }
+                &-btn {
+                    width: 100%;
                 }
             }
         }
@@ -848,10 +1126,32 @@ $Sans: "Open Sans", Arial, Helvetica, sans-serif;
                 &:hover {
                     color: $link;
                 }
+                &:active {
+                    color: rgb(131, 131, 131);
+                }
             }
             &:last-of-type {
                 margin-right: 0;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: $screen-exsm-max) {
+    .footer {
+        &-block {
+            flex-wrap: wrap;
+            padding: 15px 15px;
+        }
+        &-about,
+        &-open,
+        &-location {
+            width: 100%;
+            padding-bottom: 20px;
+        }
+        &-list {
+            margin-top: 10px;
+            font-size: 40px;
         }
     }
 }
