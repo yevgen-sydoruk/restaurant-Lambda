@@ -328,6 +328,11 @@ Variables
     display: none;
   }
 }
+@media only screen and (max-width: 550px) {
+  .header-logo-img {
+    width: 50%;
+  }
+}
 /*
 ===================
  Main
@@ -440,6 +445,35 @@ Variables
     font-size: 1rem;
   }
 }
+@media only screen and (max-width: 550px) {
+  .banner {
+    min-height: 170.8vw;
+  }
+  .banner-title {
+    max-width: 280px;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+  .banner-title::after {
+    display: none;
+  }
+  .banner-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-block-btn {
+    padding: 0.5rem 1.75rem;
+    font-size: 1rem;
+    margin-right: 0;
+  }
+  .banner-block-btn:first-of-type {
+    margin-bottom: 15px;
+  }
+  .banner-block-btn:last-of-type {
+    margin-left: 0;
+  }
+}
 /* About */
 .about {
   position: relative;
@@ -510,6 +544,11 @@ Variables
   }
   .about-aside {
     display: none;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .about-title {
+    font-size: 1.5rem;
   }
 }
 /* Ingredients */
@@ -609,6 +648,18 @@ Variables
   .ingredients-images {
     width: 80px;
     height: 80px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .ingredients-title::after {
+    top: 170px;
+  }
+  .ingredients-text {
+    max-width: 300px;
+  }
+  .ingredients-images {
+    width: 50px;
+    height: 50px;
   }
 }
 /* Menu */
@@ -737,6 +788,11 @@ Variables
     width: 100%;
   }
 }
+@media only screen and (max-width: 550px) {
+  .menu-category-list {
+    min-width: 300px;
+  }
+}
 /* Reviews */
 .reviews {
   background-image: url(../img/reviews-bg.png);
@@ -820,6 +876,22 @@ Variables
   .reviews-text {
     font-size: 1rem;
     line-height: 25px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .reviews-title::after {
+    position: absolute;
+    top: 90px;
+  }
+  .reviews-text {
+    padding-bottom: 40px;
+  }
+  .reviews-text::before {
+    font-size: 60px;
+  }
+  .reviews-content {
+    margin: 3.25rem 0;
+    padding: 30px 20px 30px;
   }
 }
 /* Reservations */

@@ -149,7 +149,7 @@ $Lato: "Lato", Arial, Helvetica, sans-serif;
 $Sans: "Open Sans", Arial, Helvetica, sans-serif;
 
 /* Adaptive sizes */
-$screen-exsm-min: 550px;
+
 $screen-exsm-max: 550px;
 $screen-sm-max: 800px;
 $screen-md-max: 1100px;
@@ -193,6 +193,7 @@ $screen-lg-max: 1400px;
         box-sizing: border-box;
     }
 }
+
 /*
 ===================
  Header 
@@ -359,6 +360,15 @@ $screen-lg-max: 1400px;
         }
     }
 }
+@media only screen and (max-width: $screen-exsm-max) {
+    .header {
+        &-logo {
+            &-img {
+                width: 50%;
+            }
+        }
+    }
+}
 
 /*
 ===================
@@ -483,7 +493,35 @@ $screen-lg-max: 1400px;
         }
     }
 }
-
+@media only screen and (max-width: $screen-exsm-max) {
+    .banner {
+        min-height: 170.8vw;
+        &-title {
+            max-width: 280px;
+            font-size: 1.5rem;
+            padding-bottom: 10px;
+            &::after {
+                display: none;
+            }
+        }
+        &-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-btn {
+                padding: 0.5rem 1.75rem;
+                font-size: 1rem;
+                margin-right: 0;
+                &:first-of-type {
+                    margin-bottom: 15px;
+                }
+                &:last-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
 /* About */
 
 .about {
@@ -555,6 +593,13 @@ $screen-lg-max: 1400px;
         }
         &-aside {
             display: none;
+        }
+    }
+}
+@media only screen and (max-width: $screen-exsm-max) {
+    .about {
+        &-title {
+            font-size: 1.5rem;
         }
     }
 }
@@ -663,6 +708,22 @@ $screen-lg-max: 1400px;
         &-images {
             width: 80px;
             height: 80px;
+        }
+    }
+}
+@media only screen and (max-width: $screen-exsm-max) {
+    .ingredients {
+        &-title {
+            &::after {
+                top: 170px;
+            }
+        }
+        &-text {
+            max-width: 300px;
+        }
+        &-images {
+            width: 50px;
+            height: 50px;
         }
     }
 }
@@ -805,6 +866,15 @@ $screen-lg-max: 1400px;
         }
     }
 }
+@media only screen and (max-width: $screen-exsm-max) {
+    .menu {
+        &-category {
+            &-list {
+                min-width: 300px;
+            }
+        }
+    }
+}
 
 /* Reviews */
 
@@ -900,6 +970,26 @@ $screen-lg-max: 1400px;
     }
 }
 
+@media only screen and (max-width: $screen-exsm-max) {
+    .reviews {
+        &-title {
+            &::after {
+                position: absolute;
+                top: 90px;
+            }
+        }
+        &-text {
+            padding-bottom: 40px;
+            &::before {
+                font-size: 60px;
+            }
+        }
+        &-content {
+            margin: 3.25rem 0;
+            padding: 30px 20px 30px;
+        }
+    }
+}
 /* Reservations */
 
 .reservations {
