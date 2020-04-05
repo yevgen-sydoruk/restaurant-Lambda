@@ -991,6 +991,7 @@ Variables
   box-sizing: border-box;
   font-style: italic;
   outline: none;
+  border: 1px solid;
 }
 .reservations-form-field-input:focus {
   border: 1px solid #c89f2d;
@@ -1061,7 +1062,7 @@ Variables
   padding: 60px 0 70px;
   color: #fff;
 }
-.footer-about, .footer-open, .footer-location {
+.footer-content {
   width: 33.33333%;
   text-align: center;
 }
@@ -1118,12 +1119,19 @@ Variables
   margin-right: 0;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 800px) {
   .footer-block {
     flex-wrap: wrap;
     padding: 15px 15px;
   }
-  .footer-about, .footer-open, .footer-location {
+}
+@media only screen and (max-width: 550px) {
+  .footer-block {
+    flex-wrap: wrap;
+    padding: 15px 15px;
+    box-sizing: border-box;
+  }
+  .footer-content {
     width: 100%;
     padding-bottom: 20px;
   }

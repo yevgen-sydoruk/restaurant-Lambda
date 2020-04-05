@@ -1086,6 +1086,7 @@ $screen-lg-max: 1400px;
                 box-sizing: border-box;
                 font-style: italic;
                 outline: none;
+                border: 1px solid;
                 &:focus {
                     border: 1px solid #c89f2d;
                 }
@@ -1163,9 +1164,7 @@ $screen-lg-max: 1400px;
         padding: 60px 0 70px;
         color: #fff;
     }
-    &-about,
-    &-open,
-    &-location {
+    &-content {
         width: 33.33333%;
         text-align: center;
     }
@@ -1226,16 +1225,22 @@ $screen-lg-max: 1400px;
         }
     }
 }
-
-@media only screen and (max-width: $screen-exsm-max) {
+@media only screen and (max-width: $screen-sm-max) {
     .footer {
         &-block {
             flex-wrap: wrap;
             padding: 15px 15px;
         }
-        &-about,
-        &-open,
-        &-location {
+    }
+}
+@media only screen and (max-width: $screen-exsm-max) {
+    .footer {
+        &-block {
+            flex-wrap: wrap;
+            padding: 15px 15px;
+            box-sizing: border-box;
+        }
+        &-content {
             width: 100%;
             padding-bottom: 20px;
         }
