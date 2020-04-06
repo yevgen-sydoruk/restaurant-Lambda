@@ -324,8 +324,29 @@ Variables
   .header-menu-toggle-burger:hover {
     color: #dab33e;
   }
+  .header-nav {
+    position: relative;
+  }
   .header-nav-list {
+    position: absolute;
+    top: 60px;
+    right: 0;
     display: none;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .header-nav-list-item {
+    padding-left: 0;
+  }
+  .header-nav-list-item:first-of-type {
+    padding-left: 0;
+  }
+  .header-nav-list-link {
+    padding-top: 0;
+  }
+  .header-nav-list-link:hover {
+    border-top: none;
+    color: #dab33e;
   }
 }
 @media only screen and (max-width: 550px) {
@@ -1022,6 +1043,10 @@ Variables
 }
 .reservations-form-field-btn:active {
   background-color: #c9a131;
+}
+
+#date:focus + label {
+  display: none;
 }
 
 @media only screen and (max-width: 1100px) {

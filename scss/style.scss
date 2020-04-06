@@ -354,8 +354,28 @@ $screen-lg-max: 1400px;
             }
         }
         &-nav {
+            position: relative;
             &-list {
+                position: absolute;
+                top: 60px;
+                right: 0;
                 display: none;
+                // display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                &-item {
+                    padding-left: 0;
+                    &:first-of-type {
+                        padding-left: 0;
+                    }
+                }
+                &-link {
+                    padding-top: 0;
+                    &:hover {
+                        border-top: none;
+                        color: $link;
+                    }
+                }
             }
         }
     }
@@ -1120,6 +1140,9 @@ $screen-lg-max: 1400px;
             }
         }
     }
+}
+#date:focus + label {
+    display: none;
 }
 @media only screen and (max-width: $screen-md-max) {
     .reservations {
