@@ -1,0 +1,46 @@
+@import "reset";
+
+/*
+===================
+Variables  
+=================== 
+*/
+/* Colors */
+$gray: #f4f5f9;
+$header: #6a6a6a;
+$text: #cbc6c0;
+$subtext: #999;
+$red: #e74c3c;
+
+/* Fonts */
+
+$Sans: "Open Sans", Arial, Helvetica, sans-serif;
+$Source: "Source Sans Pro", Arial, Helvetica, sans-serif;
+
+/* Adaptive sizes */
+
+$screen-exsm-max: 550px;
+$screen-sm-max: 800px;
+$screen-md-max: 1100px;
+$screen-lg-max: 1400px;
+
+/*
+===================
+ Basic 
+=================== 
+*/
+.wrapper {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
