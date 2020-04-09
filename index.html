@@ -13,12 +13,22 @@
 </head>
 
 <body>
+    <svg style="display: none;">
+        <symbol id="anchor" viewBox="0 0 22 31">
+            <g>
+                <path
+                    d="M970.89,988.3l-2.509-3.774a0.635,0.635,0,0,0-1.062,0L964.81,988.3a0.667,0.667,0,0,0-.036.674,0.64,0.64,0,0,0,.567.348h1.238a6.853,6.853,0,0,1-5.083,4.613V979.466h2a1.018,1.018,0,0,0,0-2.036h-1.028a3.726,3.726,0,0,0,1.176-2.717,3.64,3.64,0,1,0-7.279,0,3.73,3.73,0,0,0,1.176,2.717h-1.027a1.018,1.018,0,0,0,0,2.036h2v14.465a6.852,6.852,0,0,1-5.084-4.613h1.239a0.642,0.642,0,0,0,.567-0.348,0.665,0.665,0,0,0-.037-0.674l-2.509-3.774a0.634,0.634,0,0,0-1.061,0L949.11,988.3a0.665,0.665,0,0,0-.036.674,0.64,0.64,0,0,0,.567.348h1.349a11.077,11.077,0,0,0,6.78,8.238l-0.249.312a0.664,0.664,0,0,0-.038.774l1.981,3.058a0.628,0.628,0,0,0,1.071,0l1.981-3.058a0.663,0.663,0,0,0-.038-0.774l-0.248-.312a11.075,11.075,0,0,0,6.779-8.238h1.35a0.64,0.64,0,0,0,.567-0.348A0.667,0.667,0,0,0,970.89,988.3ZM960,973.034a1.679,1.679,0,1,1-1.645,1.679A1.664,1.664,0,0,1,960,973.034Z"
+                    transform="translate(-949 -971)" />
+            </g>
+        </symbol>
+    </svg>
     <header class="header">
         <div class="wrapper header__block">
             <div class="header__logo">
                 <a class="header__logo--link" href="#">
                     <img class="header__logo--img" src="img/Logo.png" alt="logo">
                 </a>
+                <!--  -->
             </div>
             <div class="header__nav">
                 <ul class="header__nav--list">
@@ -33,25 +43,25 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="main">
         <section class="slider" aria-labelledby="slider">
-            <div class="wrapper slider">
-                <div class="slider__block">
-                    <p class="slider__pretitle">Our Clients Are Our First Priority</p>
-                    <h1 class="slider__title" id="slider">welcome to bino</h1>
-                    <p class="slider__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                        printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                    <div class="slider__btns">
-                        <button class="slider__btns--btn">get started now</button>
-                        <button class="slider__btns--btn">learn more</button>
-                    </div>
+            <div class="slider__block">
+                <p class="slider__pretitle">Our Clients Are Our First Priority</p>
+                <h1 class="slider__title" id="slider">welcome to bino</h1>
+                <p class="slider__desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+                <div class="slider__btns">
+                    <button class="slider__btns--btn">get started now</button>
+                    <button class="slider__btns--btn">learn more</button>
                 </div>
             </div>
-            <a href="#" class="main__controls left"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="main__controls right"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="main__anchor"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="slider__controls left"><i class="fas fa-chevron-left"></i></a>
+            <a href="#" class="slider__controls right"><i class="fas fa-chevron-right"></i></a>
+            <a href="#" class="slider__anchor"><svg class="list-item-icon">
+                    <use xlink:href="#anchor"></use>
+                </svg></a>
         </section>
 
         <section class="uniques">

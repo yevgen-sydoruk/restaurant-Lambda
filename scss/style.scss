@@ -44,3 +44,202 @@ $screen-lg-max: 1400px;
     width: 1px !important;
     overflow: hidden;
 }
+
+/*
+===================
+ Header 
+=================== 
+*/
+.header {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 100;
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__nav {
+        display: flex;
+        align-items: stretch;
+        &--list {
+            display: flex;
+            align-items: center;
+        }
+        &--item {
+            margin-left: 60px;
+        }
+        &--link {
+            font-family: $Sans;
+
+            font-size: 14 / 16 * 1rem;
+            color: $gray;
+            text-transform: uppercase;
+            text-decoration: none;
+            &:hover {
+                padding-bottom: 19px;
+                color: $red;
+                border-bottom: 1px solid $red;
+            }
+        }
+    }
+}
+/*
+===================
+ Main 
+=================== 
+*/
+.slider {
+    position: relative;
+    min-height: (990 / 1920 * 100 * 1vw) - 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/banner.png);
+    background-color: rgba($color: #000, $alpha: 0.7);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+    &::after {
+        position: absolute;
+        top: 100%;
+        transform: translateY(-100%);
+        width: 100%;
+        display: block;
+        content: ".";
+        font-size: 0;
+        border: 49vw solid #fff;
+        border-bottom: 0px solid;
+        border-top: 120px solid rgba(0, 0, 0, 0);
+        box-sizing: border-box;
+        z-index: -10;
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__pretitle {
+        padding-bottom: 50px;
+        font-family: $Source;
+        font-size: 24/16 * 1rem;
+        color: $gray;
+    }
+    &__title {
+        position: relative;
+        padding-bottom: 100px;
+        font-family: $Sans;
+        font-size: 72/16 * 1rem;
+        font-weight: 700;
+        color: $gray;
+        text-transform: uppercase;
+        z-index: 100;
+        &::after {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            height: 7px;
+            width: 200px;
+            content: ".";
+            font-size: 0;
+            background-image: url(../img/devider.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 50;
+        }
+    }
+    &__desc {
+        padding-bottom: 75px;
+        max-width: 600px;
+        font-family: $Sans;
+        font-size: 14/16 * 1rem;
+        line-height: 24/16 * 1rem;
+        color: $text;
+        text-align: center;
+    }
+    &__btns {
+        display: flex;
+        justify-content: center;
+        &--btn {
+            min-width: 225px;
+            margin-right: 15px;
+            padding: 20px 0;
+            background: none;
+            font-family: $Sans;
+            font-size: 14/16 * 1rem;
+            font-weight: 700;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:last-of-type {
+                margin-right: 0;
+                margin-left: 15px;
+            }
+            &:hover {
+                background-color: $red;
+                border-color: $red;
+            }
+        }
+    }
+    &__controls {
+        position: absolute;
+        top: 45%;
+        transform: translateX(-50%);
+        height: 45/16 * 1rem;
+        width: 45/16 * 1rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        background: #716b64;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 2px;
+        mix-blend-mode: multiply;
+        z-index: 50;
+        &.left {
+            left: 5%;
+        }
+        &.right {
+            left: 95%;
+        }
+        i {
+            width: 100%;
+        }
+        &:hover {
+            background-color: $red;
+            mix-blend-mode: normal;
+        }
+    }
+    &__anchor {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 64/16 * 1rem;
+        width: 64/16 * 1rem;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 5px solid rgba($color: #fff, $alpha: 0.25);
+        background-clip: content-box;
+        z-index: 50;
+        svg {
+            width: 22px;
+            height: 31px;
+            fill: $red;
+        }
+    }
+}
