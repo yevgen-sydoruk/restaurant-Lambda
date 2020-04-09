@@ -394,6 +394,100 @@ $screen-lg-max: 1400px;
         cursor: pointer;
     }
 }
+/*
+
+ Services 
+
+*/
+.services {
+    padding: 150px 0;
+    background-color: #202020;
+    background-image: url(../img/services-banner.png);
+    background-size: 45.83% 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    &__block {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__content {
+        width: 56.83%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__box,
+    &__title {
+        padding-right: 80/16 * 1rem;
+    }
+    &__title {
+        padding-bottom: 80/16 * 1rem;
+        display: flex;
+        font-family: $Source;
+        font-size: 36/16 * 1rem;
+        font-weight: 700;
+        color: $gray;
+        text-transform: uppercase;
+        &::after {
+            margin-left: 30px;
+            content: ".";
+            display: block;
+            background-color: $red;
+            font-size: 0;
+            height: 36px;
+            width: 6px;
+        }
+    }
+    &__box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 10;
+        &--title {
+            padding-bottom: 20px;
+            font-family: $Sans;
+            font-weight: 600;
+            font-size: 18/16 * 1rem;
+            color: $red;
+            text-transform: uppercase;
+        }
+        &--text {
+            padding-bottom: 70px;
+            font-family: $Source;
+            font-size: 14/16 * 1rem;
+            line-height: 29/16 * 1rem;
+            color: $subtext;
+            text-align: right;
+        }
+        &::after,
+        &:first-of-type::after,
+        &:last-of-type::after {
+            position: absolute;
+            content: ".";
+            font-size: 0;
+            top: 0;
+            left: 100%;
+            transform: translate(-50%, 10%);
+            background-image: url(../icons/services-document.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 64/16 * 1rem;
+            width: 64/16 * 1rem;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 5px solid rgba($color: #fff, $alpha: 0.25);
+            background-clip: content-box;
+            z-index: 50;
+        }
+        &:first-of-type::after {
+            background-image: url(../icons/services-computer.svg);
+        }
+        &:last-of-type::after {
+            background-image: url(../icons/services-camera.svg);
+        }
+    }
+}
 
 // .grow:hover {
 //     -webkit-transform: scale(1.2);
