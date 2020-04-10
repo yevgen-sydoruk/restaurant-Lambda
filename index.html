@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bino</title>
     <link rel="stylesheet" href="css/style.css">
+    li
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7CSource+Sans+Pro:300,400,600,700&display=swap"
         rel="stylesheet">
@@ -96,7 +97,7 @@
             </div>
             <a href="#" class="slider__controls left"><i class="fas fa-chevron-left"></i></a>
             <a href="#" class="slider__controls right"><i class="fas fa-chevron-right"></i></a>
-            <a href="#" class="slider__anchor">
+            <a href="#uniques" class="slider__anchor">
                 <svg>
                     <use xlink:href="#anchor"></use>
                 </svg>
@@ -107,7 +108,7 @@
             <h2 class="visually-hidden">
                 Who we are
             </h2>
-            <div class="wrapper uniques__block">
+            <div class="wrapper uniques__block" id="uniques">
                 <article class="uniques__card">
                     <div class="uniques__card--icons">
                         <svg class="uniques__card--svg">
@@ -201,19 +202,18 @@
                             industry. Lorem Ip sum has been the industry's standard dummy text ever.</p>
                     </article>
                 </div>
-                <!-- <div class="services__side-img">
-                    <img src="img/services-banner.png" alt="Tablet" class="services__side-img--img">
-                </div> -->
             </div>
         </section>
+
         <section class="works" aria-labelledby="works">
-            <div class="wrapper works__block">
+            <div class="works__block">
                 <h2 class="works__title" id="works">recent works</h2>
                 <p class="works__subtitle">It has survived not only five centuries, but also the leap scrambled it to
                     make a
                     type.
                 </p>
                 <div class="works__categories">
+                    <!--  -->
                     <ul class="works__list">
                         <li class="works__item"><button type="button" class="works__btn">all</button></li>
                         <li class="works__item"><button type="button" class="works__btn">print design</button></li>
@@ -226,67 +226,99 @@
                 </div>
             </div>
             <div class="works__palette">
-                <div class="works__palette--item">
+                <article class="works__palette--item">
                     <img src="img/portfolio/portfolio-1.png" alt="web design" class="works__palette--img">
-                    <h3 class="works__palette--title">web design</h3>
-                    <p class="works__palette--subtitle">art / web design</p>
-                </div>
-                <div class="works__palette--item">
+                    <div class="works__palette--content">
+                        <h3 class="works__palette--title">web design</h3>
+                        <p class="works__palette--subtitle">art / web design</p>
+                    </div>
+                </article>
+                <article class="works__palette--item">
                     <img src="img/portfolio/portfolio-2.png" alt="print design" class="works__palette--img">
-                    <h3 class="works__palette--title">print design</h3>
-                    <p class="works__palette--subtitle">art / t-shirt</p>
-                </div>
-                <div class="works__palette--item">
+                    <div class="works__palette--content">
+                        <h3 class="works__palette--title">print design</h3>
+                        <p class="works__palette--subtitle">art / t-shirt</p>
+                    </div>
+                </article>
+                <article class="works__palette--item">
                     <img src="img/portfolio/portfolio-3.png" alt="art" class="works__palette--img">
-                    <h3 class="works__palette--title">art</h3>
-                    <p class="works__palette--subtitle">art / web design</p>
-                </div>
-                <div class="works__palette--item">
+                    <div class="works__palette--content">
+                        <h3 class="works__palette--title">art</h3>
+                        <p class="works__palette--subtitle">art / web design</p>
+                    </div>
+                </article>
+                <article class="works__palette--item">
                     <img src="img/portfolio/portfolio-4.png" alt="web design" class="works__palette--img">
-                    <h3 class="works__palette--title">web design</h3>
-                    <p class="works__palette--subtitle">web design</p>
-                </div>
-                <div class="works__palette--item">
+                    <div class="works__palette--content">
+                        <h3 class="works__palette--title">web design</h3>
+                        <p class="works__palette--subtitle">web design</p>
+                    </div>
+                </article>
+                <article class="works__palette--item">
                     <img src="img/portfolio/portfolio-5.png" alt="animation" class="works__palette--img">
-                    <h3 class="works__palette--title">animation</h3>
-                    <p class="works__palette--subtitle">animation</p>
-                </div>
-                <div class="works__palette--item">
+                    <div class="works__palette--content">
+                        <h3 class="works__palette--title">animation</h3>
+                        <p class="works__palette--subtitle">animation</p>
+                    </div>
+                </article>
+                <article class="works__palette--item">
                     <img src="img/portfolio/portfolio-6.png" alt="photography" class="works__palette--img">
-                    <h3 class="works__palette--title">photography</h3>
-                    <p class="works__palette--subtitle">art / photography</p>
-                </div>
-                <div class="works__palette--item">
+                    <div class="works__palette--content">
+                        <h3 class="works__palette--title">photography</h3>
+                        <p class="works__palette--subtitle">art / photo
+                            graphy</p>
+                    </div>
+                </article>
+                <article class="works__palette--item">
                     <img src="img/portfolio/portfolio-7.png" alt="web design" class="works__palette--img">
-                    <h3 class="works__palette--title">web design</h3>
-                    <p class="works__palette--subtitle">web design / video</p>
-                </div>
-                <div class="works__palette--item">
+                    <div class="works__palette--content">
+                        <h3 class="works__palette--title">web design</h3>
+                        <p class="works__palette--subtitle">web design /
+                            video</p>
+                    </div>
+                </article>
+                <article class="works__palette--item">
                     <img src="img/portfolio/portfolio-8.png" alt="video" class="works__palette--img">
-                    <h3 class="works__palette--title">video</h3>
-                    <p class="works__palette--subtitle">video</p>
-                </div>
+                    <div class="works__palette--content">
+                        <h3 class="works__palette--title">video</h3>
+                        <p class="works__palette--subtitle">video</p>
+                    </div>
+                </article>
             </div>
         </section>
+
         <section class="study" aria-labelledby="study">
             <h2 class="study__title" id="study">case study</h2>
             <p class="study__subtitle">A brief story about how this process works, keep an eye till the end.</p>
             <div class="wrapper study__block">
                 <div class="study__slider">
                     <article class="study__content">
-                        <i class="fab fa-twitter"></i>
-                        <h3 class="study__content--title">creative ideas</h3>
+                        <div class="study__content--icons">
+                            <svg class="study__content--svg">
+                                <use xlink:href="#idea"></use>
+                            </svg>
+                        </div>
+                        <h3 class="study__content--title">accumulate creative ideas</h3>
                         <p class="study__content--text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            let.
-                            Lorem Ipsum has been the industry.</p>
+                            let. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text of the printing and
+                            typesetting let. Lorem Ipsum has been the industry Printing and typelorem Ipsum has been the
+                            setting let.</p>
                         <button type="button" class="study__content--btn">read more</button>
+                        <div class="study__controls">
+                            <ul class="study__controls--list">
+                                <li class="study__controls--item"><button type="button"
+                                        class="study__controls--switch active"></button></li>
+                                <li class="study__controls--item"><button type="button"
+                                        class="study__controls--switch"></button></li>
+                                <li class="study__controls--item"><button type="button"
+                                        class="study__controls--switch"></button></li>
+                            </ul>
+                        </div>
                     </article>
-                </div>
-                <div class="study__side-img">
-                    <img src="img/study.png" alt="Workspace" class="study__side-img--img">
                 </div>
             </div>
         </section>
+
         <section class="stats">
             <h2 class="visually-hidden">
                 Check our stats
